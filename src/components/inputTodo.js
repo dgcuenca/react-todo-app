@@ -9,7 +9,11 @@ class InputTodo extends Component {
     render() {
         return (
             <form>
-                <input type="text" placeholder="Add Todo..." />
+                <input 
+                type="text" 
+                placeholder="Add Todo..." 
+                value={this.state.title} 
+                />
                 <button>Submit</button>
             </form>
         )
