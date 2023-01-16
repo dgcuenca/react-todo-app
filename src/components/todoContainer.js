@@ -29,5 +29,9 @@ class TodoContainer extends React.Component {
     </div>
     );
   }
+  //It can be any name
+  handleChange = () => {
+    console.log("clicked");
+  };
 }
 export default TodoContainer
