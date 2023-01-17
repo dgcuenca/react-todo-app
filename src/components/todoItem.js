@@ -1,9 +1,16 @@
 import React from 'react';
 import styles from "./todoItem.module.css"
 class TodoItem extends React.Component {
-  handleEditing = () => {
-    console.log("edit mode activated")
+
+  state = {
+    editing: false,
   }
+
+  handleEditing = () => {
+    this.setState({
+      editing: true,
+    })
+  };
   render() {
     const completedStyle = {
       fontStyle: "italic",
@@ -12,9 +19,18 @@ class TodoItem extends React.Component {
       textDecoration: "line-through",
     }
     const { completed, id, title } = this.props.todo
+
+    let viewMode = {}
+    let editMode = {}
+    if (this.state.editing) {
+      viewMode.display = "none"
+    } else {
+      editMode.display = "none"
+    }
+
     return (
       <li className={styles.item}>
-        <div onDoubleClick={this.handleEditing}>
+        <div onDoubleClick={this.handleEditing} style={viewMode}>
           <input
             type="checkbox"
             className={styles.checkbox}
@@ -28,6 +44,11 @@ class TodoItem extends React.Component {
             {title}
           </span>
         </div>
+        <input
+          type="text"
+          style={editMode}
+          className={styles.textInput}
+        />
       </li>
     )
   }
