@@ -4,6 +4,9 @@ import InputTodo from "./inputTodo";
 import { v4 as uuidv4 } from "uuid";
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from "react-router-dom";
+import About from "../pages/about"
+import NotMatch from "../pages/notMatch"
+
 
 const TodoContainer = () => {
   const [todos, setTodos] = useState(getInitialTodos())
