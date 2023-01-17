@@ -8,7 +8,7 @@ const InputTodo = props => {
 
   const onChange = e => {
     setInputText({
-      // ...inputText,
+      ...inputText,
       [e.target.name]: e.target.value,
     })
   }
