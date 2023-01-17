@@ -8,6 +8,23 @@ class TodoContainer extends React.Component {
     todos: [],
   };
 
+  //It can be any name
+  handleChange = id => {
+    this.setState(prevState => {
+      return {
+        todos: prevState.todos.map(todo => {
+          if (todo.id === id) {
+            return {
+              ...todo,
+              completed: !todo.completed,
+            }
+          }
+          return todo
+        }),
+      }
+    });
+  };
+  
   componentDidMount() {
     const temp = localStorage.getItem("todos")
     const loadedTodos = JSON.parse(temp)
@@ -73,21 +90,6 @@ class TodoContainer extends React.Component {
       </div>
     );
   }
-  //It can be any name
-  handleChange = id => {
-    this.setState(prevState => {
-      return {
-        todos: prevState.todos.map(todo => {
-          if (todo.id === id) {
-            return {
-              ...todo,
-              completed: !todo.completed,
-            }
-          }
-          return todo
-        }),
-      }
-    });
-  };
+  
 }
 export default TodoContainer
