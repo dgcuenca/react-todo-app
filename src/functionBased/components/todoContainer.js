@@ -1,7 +1,6 @@
 import TodosList from "./todosList";
 import Header from "./header";
 import InputTodo from "./inputTodo";
-import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import React, { useState, useEffect } from 'react';
 
@@ -22,6 +21,18 @@ const TodoContainer = () => {
       })
     )
   }
+
+  useEffect(() => {
+    console.log("test run")
+  
+    // getting stored items
+    const temp = localStorage.getItem("todos")
+    const loadedTodos = JSON.parse(temp)
+  
+    if (loadedTodos) {
+      setTodos(loadedTodos)
+    }
+  }, [])
 
   const delTodo = id => {
     setTodos([
