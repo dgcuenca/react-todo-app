@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const About = () => {
   return (
@@ -7,10 +7,10 @@ const About = () => {
       <div>hello from about Page</div>
       <ul>
         <li>
-          <Link to="about-app">About App</Link>
+          <NavLink to="about-app">About App</NavLink>
         </li>
         <li>
-          <Link to="about-author">About Author</Link>
+          <NavLink to="about-author">About Author</NavLink>
         </li>
       </ul>
       <Outlet />
