@@ -133,6 +133,8 @@ You can deploy this project using:
 
 > Describe 1 - 3 features you will add to the project.
 
+- [ ] **[Fix linters errors]**
+
 - [ ] **[Add a hamburguer menu]**
 
 - [ ] **[Deploy using github pages]**
