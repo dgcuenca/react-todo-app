@@ -12,7 +12,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<TodoContainer />} />
-        <Route path="/about" >
+        <Route path="/about">
           <Route index element={<About />} />
           <Route path="about-app" element={<AboutApp />} />
           <Route path="about-author" element={<AboutAuthor />} />

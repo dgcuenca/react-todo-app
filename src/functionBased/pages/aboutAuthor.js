@@ -1,6 +1,4 @@
-import React from "react"
+import React from 'react';
 
-const AboutAuthor = () => {
-  return <div>hello from about Author</div>
-}
-export default AboutAuthor
+const AboutAuthor = () => <div>hello from about Author</div>;
+export default AboutAuthor;
