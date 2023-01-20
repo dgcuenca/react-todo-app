@@ -19,20 +19,6 @@ const TodoContainer = () => {
     }));
   };
 
-  // componentDidMount
-  // useEffect(() => {
-  //   console.log("test run")
-
-  //   // getting stored items
-  //   const temp = localStorage.getItem("todos")
-  //   const loadedTodos = JSON.parse(temp)
-
-  //   if (loadedTodos) {
-  //     //this triggers an extra rendering
-  //     setTodos(loadedTodos)
-  //   }
-  // }, [])
-
   function getInitialTodos() {
     // getting stored items
     const temp = localStorage.getItem('todos');
